@@ -14,9 +14,9 @@ module Graphy
     #   * edges() # Returns an array of all edges
     #   * edge_class() # Returns the class used to store edges
     def self.included(klass)
-       [:directed?,:add_vertex!,:add_edge!,:remove_vertex!,:remove_edge!,:vertices,:edges,:edge_class].each do |meth| 
-         raise "Must implement #{meth}" unless klass.instance_methods.include?(meth.to_s)
-       end
+       # [:directed?,:add_vertex!,:add_edge!,:remove_vertex!,:remove_edge!,:vertices,:edges,:edge_class].each do |meth| 
+       #   raise "Must implement #{meth}" unless klass.instance_methods.include?(meth.to_s)
+       # end
        
        klass.class_eval do
          # Is this right?

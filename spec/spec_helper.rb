@@ -1,8 +1,8 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+# $LOAD_PATH.unshift(File.dirname(__FILE__))
+# $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'graphy'
-require 'spec'
-require 'spec/autorun'
+# require 'spec'
+# require 'spec/autorun'
 
 include Graphy
 
@@ -51,6 +51,6 @@ module AncestryHelper
 
 end
 
-Spec::Runner.configure do |config|
-  config.include AncestryHelper
+RSpec.configure do |config|
+  include AncestryHelper
 end
